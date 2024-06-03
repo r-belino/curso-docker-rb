@@ -12,11 +12,26 @@ A senha do usuário deve ser docker_pwd
 Lembrando que a execução em container deve ser transparente pra quem está desenvolvendo. E que aqui você não precisa se preocupar com a perda dos dados do banco e nem nada disso, é apenas para desenvolvimento pontual.
 
 Coloque aqui embaixo o comando que a equipe deve usar pra criar um banco de dados PostgreSQL com esses requisitos.
-------------------------------------------------------------------------------------------------------------------------------------------------------------
-Comando para criar o banco de dados com os requisitos solicitados
 
+### Comando para criar o banco de dados com os requisitos solicitados
 `docker run --name postgres_db -e POSTGRES_DB=curso_docker -e POSTGRES_USER=docker_usr -e POSTGRES_PASSWORD=docker_pwd -p 5432:5432 -d postgres`
 
-Comando para acessar o banco de dados
-
+### Comando para acessar o banco de dados
 `psql -h localhost -U docker_usr -p 5432 postgres`
+
+
+# Desafio 02 - Banco de Dados MySQL
+
+Agora que a equipe tem como criar o banco de dados Postgre, crie o comando pra criar o banco de dados MySQL usando os requisitos abaixo:
+
+O nome do banco de dados deve ser docker_db
+O usuário de acesso ao banco deve ser docker_usr
+A senha do usuário deve ser docker_pwd
+Lembrando que a execução em container deve ser transparente pra quem está desenvolvendo. E que aqui você não precisa se preocupar com a perda dos dados do banco e nem nada disso, é apenas para desenvolvimento pontual.
+
+Coloque aqui embaixo o comando que a equipe deve usar pra criar um banco de dados MySQL com esses requisitos:
+### Comando para criar o banco de dados com os requisitos solicitados
+`docker run --name mysql_db -e MYSQL_DATABASE=docker_db -e MYSQL_USER=docker_usr -e MYSQL_PASSWORD=docker_pwd -e MYSQL_ROOT_PASSWORD=root_pwd -p 3306:3306 -d mysql`
+
+### Comando para acessar o banco de dados
+`mysql -h 127.0.0.1 -P 3306 -u docker_usr -pdocker_pwd`
