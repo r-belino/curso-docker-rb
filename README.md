@@ -15,7 +15,7 @@ Coloque aqui embaixo o comando que a equipe deve usar pra criar um banco de dado
 ------------------------------------------------------------------------------------------------------------------------------------------------------------
 Comando para criar o banco de dados com os requisitos solicitados
 
-`docker run --name meu_postgres -e POSTGRES_DB=curso_docker -e POSTGRES_USER=docker_usr -e POSTGRES_PASSWORD=docker_pwd -p 5432:5432 -d postgres`
+`docker run --name postgres_db -e POSTGRES_DB=curso_docker -e POSTGRES_USER=docker_usr -e POSTGRES_PASSWORD=docker_pwd -p 5432:5432 -d postgres`
 
 Comando para acessar o banco de dados
 
