@@ -35,3 +35,17 @@ Coloque aqui embaixo o comando que a equipe deve usar pra criar um banco de dado
 
 ### Comando para acessar o banco de dados
 `mysql -h 127.0.0.1 -P 3306 -u docker_usr -pdocker_pwd`
+
+
+### Desafio 03 - Banco de Dados MongoDB
+Pra finalizar essa etapa, crie o comando pra criar o banco de dados MongoDB usando os requisitos abaixo:
+O usuário root do banco deve ser mongo_usr
+A senha do usuário root deve ser mongo_pwd
+Lembrando que a execução em container deve ser transparente pra quem está desenvolvendo. E que aqui você não precisa se preocupar com a perda dos dados do banco e nem nada disso, é apenas para desenvolvimento pontual.
+
+Coloque aqui embaixo o comando que a equipe deve usar pra criar um banco de dados MongoDB com esses requisitos:
+### Comando para criar o banco de dados com os requisitos solicitados
+`docker run --name meu_mongo -e MONGO_INITDB_ROOT_USERNAME=mongo_usr -e MONGO_INITDB_ROOT_PASSWORD=mongo_pwd -p 27017:27017 -d mongo`
+
+### Comando para acessar o banco de dados
+`mongosh -u mongo_usr -p mongo_pwd --authenticationDatabase admin --host 127.0.0.1 --port 27017`
